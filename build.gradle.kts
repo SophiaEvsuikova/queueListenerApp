@@ -17,12 +17,16 @@ repositories {
 
 dependencies {
 	implementation("org.springframework.boot:spring-boot-starter-activemq")
-	//implementation("org.springframework.boot:spring-boot-starter-data-jdbc")
+	implementation ("io.github.microutils:kotlin-logging-jvm:2.1.20")
+	implementation("org.apache.activemq:activemq-broker")
+	implementation("com.google.code.gson:gson")
+	implementation("org.springframework.boot:spring-boot-starter-data-jdbc")
 	implementation("org.jetbrains.kotlin:kotlin-reflect")
 	implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
 	implementation("org.springframework.boot:spring-boot-starter-web")
-	//runtimeOnly("org.postgresql:postgresql")
+	runtimeOnly("org.postgresql:postgresql")
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
+	implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.3.3")
 }
 
 tasks.withType<KotlinCompile> {
